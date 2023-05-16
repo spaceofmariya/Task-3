@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
+  text-decoration: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Gordita Regular";
+}
+
+b {
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Gordita Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Regular"),
+    url("../fonts/Gordita Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gordita Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Medium"), url("../Gordita Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gordita Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Bold"), url("../Gordita Bold.woff") format("woff");
+}
+
+header {
+  height: 100px;
+  padding: 0 80px;
+  background-color: rgb(249, 245, 249);
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+header h1 a {
+  display: block;
+}
+
+header h1 a h3 b {
+  color: rgb(20, 120, 186);
+}
+
+#form {
+  height: calc(100vh - 100px);
+  background-image: url(../images/art2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+#form .form_container {
+  width: 30%;
+  margin: 0 auto;
+  background-color: rgb(249, 245, 249);
+  color: rgb(20, 120, 186);
+  border-radius: 30px;
+  padding: 3%;
+}
+
+#form .form_container .top h5 {
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 16px;
+}
+
+#form .form_container .bottom form .input_container {
+  margin-bottom: 20px;
+}
+
+#form .form_container .bottom form .input_container label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#form .form_container .bottom form .input_container input {
+  margin-left: 20px;
+  width: 70%;
+  height: 40px;
+  border: 1px solid rgb(20, 120, 186);
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+#form .form_container .bottom form .submit_container {
+  text-align: center;
+}
+
+#form .form_container .bottom form .submit_container button {
+  padding: 10px 20px;
+  background-color: rgb(112, 178, 222);
+  font-weight: 700;
+  border-radius: 10px;
+  color: aliceblue;
+  font-size: 19px;
+  margin-right: 10px;
+}
+
+#form .form_container .bottom form .submit_container p {
+  color: rgb(236, 160, 180);
+  margin-bottom: 15px;
+}
+
+#form .form_container .bottom form .submit_container a {
+  font-size: 14px;
+  color: rgb(236, 160, 180);
+}

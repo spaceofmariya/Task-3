@@ -113,7 +113,7 @@ b {
 header {
   height: 100px;
   padding: 0 80px;
-  background-color: aliceblue;
+  background-color: rgb(249, 245, 249);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,14 +122,17 @@ header {
 header h1 a {
   display: block;
 }
+header h1 a h3 b {
+  color: rgb(20, 120, 186);
+}
 
 header a.login,
 .logout {
-  background-color: #06323f;
+  background-color: rgb(20, 120, 186);
   padding: 12px 25px;
   font-size: 20px;
   font-weight: 900;
-  color: #fff;
+  color: rgb(249, 245, 249);
   text-align: center;
   border-radius: 8px;
   display: inline-block;
@@ -137,11 +140,11 @@ header a.login,
 
 #home .spotLight {
   height: calc(100vh - 100px);
-  color: #fff;
+  color: rgb(20, 120, 186);
   text-align: center;
-  background-image: url(../images/art1.jpg);
-  /* background-repeat: no-repeat; */
-  background-size: contain;
+  background-image: url(../images/art2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #home .spotLight section.wrapper {
@@ -154,22 +157,32 @@ header a.login,
 #home .spotLight section.spotlight h2 {
   font-size: 50px;
   text-transform: uppercase;
+  font-weight: 800;
   /* text-align: center; */
   margin-bottom: 1%;
   display: inline-block;
+}
+#home .spotLight section.spotlight h2 span {
+  font-size: 60px;
+  font-weight: 800;
 }
 
 #home .spotLight section.spotlight p {
   font-size: 25px;
   margin-bottom: 20px;
+  font-weight: 800;
 }
 
 #home .spotLight section.spotlight a.register {
   font-size: 23px;
   padding: 17px;
-  background-color: aliceblue;
+  background-color: rgb(249, 245, 249);
+  color: rgb(20, 120, 186);
+  font-weight: 800;
   border-radius: 10px;
-  border: 2px solid aliceblue;
-  outline: 2px solid #000;
-  outline-offset: -5px;
+  border: 1px solid rgb(20, 120, 186);
+}
+#home .spotLight section.spotlight small {
+  display: block;
+  margin-top: 10px;
 }
