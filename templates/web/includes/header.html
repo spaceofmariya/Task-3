@@ -1,0 +1,21 @@
+{% load static %}
+<header>
+    <h1>
+        <a href="{% url 'web:index' %}">
+
+            <h3><b>Annual Events</b></h3>
+
+        </a>
+    </h1>
+    {% if request.user.is_authenticated %}
+    <div>
+        <!-- <a href="{% url 'posts:create_post' %}" class="login"> Create </a> -->
+        <!-- <a href="{% url 'posts:my_posts' %}" class="login"> My Page </a> -->
+        <a href="{% url 'web:index' %}" class="login"> Logout </a>
+    <div>  
+    {% else %}
+    <div>
+        <a href="{% url 'web:index' %}" class="logout"> Login </a>
+    <div>  
+    {% endif %}  
+</header>
