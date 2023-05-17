@@ -10,7 +10,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Gordita Regular";
+  font-family: "Mogra";
 }
 
 ol,
@@ -79,25 +79,21 @@ br.clear {
 }
 
 @font-face {
-  font-family: "Gordita Regular";
-  font-style: normal;
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico-Regular.woff2") format("woff2"),
+    url("../fonts/Pacifico-Regular.woff") format("woff");
   font-weight: normal;
-  src: local("Gordita Regular"),
-    url("../fonts/Gordita Regular.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Gordita Medium";
-  font-style: normal;
+  font-family: "Mogra";
+  src: url("../fonts/Mogra-Regular.woff2") format("woff2"),
+    url("../fonts/Mogra-Regular.woff") format("woff");
   font-weight: normal;
-  src: local("Gordita Medium"), url("../Gordita Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Gordita Bold";
   font-style: normal;
-  font-weight: normal;
-  src: local("Gordita Bold"), url("../Gordita Bold.woff") format("woff");
+  font-display: swap;
 }
 
 img {
@@ -124,13 +120,15 @@ header h1 a {
 }
 header h1 a h3 b {
   color: rgb(20, 120, 186);
+  font-size: 40px;
 }
 
 header a.login,
 .logout {
-  background-color: rgb(20, 120, 186);
-  padding: 12px 25px;
-  font-size: 20px;
+  /* background-color: rgb(20, 120, 186); */
+  background-color: rgb(112, 178, 222);
+  padding: 13px 30px;
+  font-size: 22px;
   font-weight: 900;
   color: rgb(249, 245, 249);
   text-align: center;
@@ -155,7 +153,7 @@ header a.login,
 }
 
 #home .spotLight section.spotlight h2 {
-  font-size: 50px;
+  font-size: 60px;
   text-transform: uppercase;
   font-weight: 800;
   /* text-align: center; */
@@ -163,7 +161,7 @@ header a.login,
   display: inline-block;
 }
 #home .spotLight section.spotlight h2 span {
-  font-size: 60px;
+  font-size: 90px;
   font-weight: 800;
 }
 
@@ -176,11 +174,13 @@ header a.login,
 #home .spotLight section.spotlight a.register {
   font-size: 23px;
   padding: 17px;
-  background-color: rgb(249, 245, 249);
-  color: rgb(20, 120, 186);
+  /* background-color: rgb(249, 245, 249); */
+  background-color: rgb(112, 178, 222);
+  /* color: rgb(20, 120, 186); */
+  color: rgb(249, 245, 249);
   font-weight: 800;
   border-radius: 10px;
-  border: 1px solid rgb(20, 120, 186);
+  /* border: 1px solid rgb(20, 120, 186); */
 }
 #home .spotLight section.spotlight small {
   display: block;

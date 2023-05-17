@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+{% include 'web/includes/header.html' %}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div class="table-responsive">
+				<table class="table user-list">
+					<thead>
+						<tr>
+							<th><span>Applicants</span></th>
+							<th><span>Date of Birth</span></th>
+							<th class="text-center"><span>Gender</span></th>
+							<th><span>Email</span></th>
+							<th><span>Phone Number</span></th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for student in students %}
+						<tr>
+							<td>
+								<img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
+								<a href="#" class="user-link">{{student.first_name}} {{student.last_name}}</a>
+								<span class="user-subhead">({{student.degree}})</span>
+							</td>
+							<td>
+								{{student.date_of_birth}}
+							</td>
+							<td class="text-center">
+								<span class="label label-default">{{student.gender}}</span>
+							</td>
+							<td>
+								<a href="#">{{student.email}}</a>
+							</td>
+							<td>
+								<span class="label label-default">{{student.number}}</span>
+							</td>
+							<td style="width: 20%;">
+								<a href="{% url 'registration_completed:edit' id=student.id %}" class="table-link reload">
+									<span class="fa-stack">
+										<i class="fa fa-square fa-stack-2x"></i>
+										<i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="{% url 'registration_completed:delete' id=student.id %}" class="table-link danger action-button reload">
+									<span class="fa-stack">
+										<i class="fa fa-square fa-stack-2x"></i>
+										<i class="fa fa-trash-o fa-stack-1x fa-inverse "></i>
+									</span>
+								</a>
+							</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+{% endblock %}
