@@ -7,44 +7,62 @@ from registered.forms import RegistrationForm
 from registered.models import Form
 
 
-def registration_form(request):
-
-    if request.method == "POST":
-        form = RegistrationForm(request.POST, request.FILES)
-
-        if form.is_valid():
-            print(form)
-            form.save()
-            response_data = {
-                    "title": "Successfully submitted",
-                    "message": "Successfully submitted",
-                    "status": "success",
-                    "redirect": "yes",
-                    "redirect_url": "/"
-            }
-            return HttpResponse(json.dumps(response_data), content_type='application/json')  
-        else:
-            print("error")
-            context={
-            "form" : form
-            }
-            return render(request,'web/register.html',context=context)
-        
+def register(request):
+    form = RegistrationForm(request.POST)
+    if form.is_valid():
+        form.save()
+        response_data = {
+            "status": "success",
+            "title": "Successfully subscribed",
+            "message": "You have successfully subscribed for the Demo."
+        }
     else:
-        data={
-            "first_name":"Test",
-            "last_name":"Test2",
-            "gender":"F",
-            "class_":"5",
-            "email":"test@gmail.com",
-            "contact_number":"1234567890",
-            "item":"5",
-        }
-        form = RegistrationForm(initial=data)
-        context={
-            "form" : form
-        }
-        return render(request,'web/register.html',context=context)
+        response_data = {
+            "status": "error",
+            "title": "Already subscribed",
+            "message": "You have already subscribed. No need to register again."
+        }    
+    return HttpResponse(json.dumps(response_data), content_type="application/javascript")
+
+
+# def register(request):
+
+#     if request.method == "POST":
+#         form = RegistrationForm(request.POST, request.FILES)
+
+#         if form.is_valid():
+#             print(form)
+#             form.save()
+#             response_data = {
+#                     "title": "Successfully submitted",
+#                     "message": "Successfully submitted",
+#                     "status": "success",
+#                     "redirect": "yes",
+#                     "redirect_url": "/"
+#             }
+#             return HttpResponse(json.dumps(response_data), content_type='application/javascript')  
+#         else:
+#             print("error")
+#             context={
+#             "form" : form
+#             }
+#             return render(request,'web/register.html',context=context)
+        
+#     else:
+#         data={
+#             "first_name":"Test",
+#             "last_name":"Test2",
+#             "gender":"F",
+#             "class_":"5",
+#             "email":"test@gmail.com",
+#             "contact_number":"1234567890",
+#             "item":"5",
+#         }
+#         form = RegistrationForm(initial=data)
+#         context={
+#             "form" : form
+#         }
+#         return render(request,'web/register.html',context=context)
 
 # Applicant form Edit function    
 # def edit(request,id):

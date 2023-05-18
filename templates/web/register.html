@@ -1,10 +1,16 @@
 {% extends "user_base.html" %} {% block content %} {% load static %}
 <section class="form_container register">
   <div class="top">
+    <h4>ARTS FEST</h4>
     <h5>Register your Application</h5>
   </div>
   <div class="bottom">
-    <form class="ajax redirect" method="post" enctype="multipart/form-data">
+    <form
+      action="{% url 'registered:submit' %}"
+      class="ajax redirect"
+      method="post"
+      enctype="multipart/form-data"
+    >
       {% csrf_token %}
       <div class="input_container">
         <label for="{{form.first_name.id_for_label}}">
@@ -25,10 +31,10 @@
         {{form.date_of_birth}}
       </div>
       <div class="input_container">
-        <h5 for="id_username">Gender</h5>
-        {% for gender in form.gender %}
-        <label for="{{gender.id_for_label}}"> {{gender.label}}</label>
-        {{gender}} {% endfor %}
+        <label for="{{form.gender.id_for_label}}">
+          {{form.gender.label}}
+        </label>
+        {{form.gender}}
       </div>
       <div class="input_container">
         <label for="{{form.email.id_for_label}}"> Email </label>
@@ -36,11 +42,11 @@
       </div>
       <div class="input_container">
         <label for="{{form.contact_number.id_for_label}}"> Mobile No. </label>
-        {{form.number}}
+        {{form.contact_number}}
       </div>
       <div class="input_container">
-        <label for="{{form.degree.id_for_label}}"> Class </label>
-        {{form.class_}}
+        <label for="{{form.school_grade.id_for_label}}"> Class </label>
+        {{form.school_grade}}
       </div>
       <div class="input_container">
         <label for="{{form.item.id_for_label}}"> Participating Item </label>

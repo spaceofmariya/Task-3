@@ -5,12 +5,12 @@ from registered.models import GENDER,CLASS,ITEMS
 
 
 class RegistrationForm(forms.ModelForm):
-    gender = forms.RadioSelect(choices=GENDER)
-    class_ = forms.ChoiceField(choices=CLASS)
+    gender = forms.ChoiceField(choices=GENDER)
+    school_grade = forms.ChoiceField(choices=CLASS)
     items = forms.ChoiceField(choices=ITEMS)
     class Meta:
         model = Form
-        fields = '__all__' 
+        fields = "__all__" 
         # widgets = {
         #     "first_name": forms.TextInput(),
         #     "last_name": forms.TextInput(),

@@ -5,6 +5,7 @@ from django.db import models
 
 
 GENDER = (
+    ('', 'Select Gender'),
     ('M', 'Male'),
     ('F', 'Female'),
     ('O', 'Other')
@@ -60,7 +61,7 @@ class Form(models.Model):
     last_name = models.CharField(max_length=120)
     date_of_birth = models.DateField(default=datetime.date.today())
     gender = models.CharField(max_length=120,choices=GENDER)
-    class_ = models.CharField(max_length=120,choices=CLASS)
+    school_grade = models.CharField(max_length=120,choices=CLASS)
     email = models.EmailField(blank=True, null=True)
     contact_number = models.CharField(max_length=10)
     item = models.CharField(max_length=120,choices=ITEMS)
