@@ -1,5 +1,3 @@
-from django.shortcuts import render
-
 from django.shortcuts import render, reverse
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.http.response import HttpResponseRedirect
@@ -7,7 +5,8 @@ from django.contrib.auth.models import User
 
 from users.forms import UserForm
 from main.functions import generate_form_errors
-# from posts.models import Author
+from users.models import User
+from registered.models import Form
 
  
 def login(request):
@@ -20,7 +19,7 @@ def login(request):
             if user is not None:
                 auth_login(request,user)
 
-                return HttpResponseRedirect("/")
+                return HttpResponseRedirect("/logged-in")
  
         context={
             "error":True,
@@ -51,7 +50,7 @@ def signup(request):
                 last_name=instance.last_name
             )
 
-            Author.objects.create(name=instance.first_name, user=user)
+            User.objects.create(name=instance.first_name, user=user)
 
             user = authenticate(request,username=instance.username, password=instance.password)
             auth_login(request,user)
@@ -73,3 +72,11 @@ def signup(request):
             "form": form,
         }
         return render(request, "users/signup.html", context=context)
+    
+def userPage(request):
+    students = Form.objects.all()
+    context={
+        "students": students
+    } 
+    
+    return render(request, "users/userPage.html",context=context)

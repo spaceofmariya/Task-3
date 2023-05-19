@@ -15,6 +15,7 @@ $(document).ready(function () {
       contentType: false,
       cache: false,
       success: function (data) {
+        console.log("Success");
         var status = data["status"];
         var title = data["title"];
         var message = data["message"];

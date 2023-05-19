@@ -76,6 +76,10 @@ header h1 a h3 b {
   font-size: 16px;
 }
 
+#form .form_container .bottom form {
+  /* text-align: center; */
+}
+
 #form .form_container .bottom form .input_container {
   margin-bottom: 20px;
 }
@@ -114,6 +118,11 @@ header h1 a h3 b {
 #form .form_container .bottom form .submit_container p {
   color: rgb(236, 160, 180);
   margin-bottom: 15px;
+}
+
+#form .form_container .bottom form .submit_container ul li {
+  color: rgb(236, 160, 180);
+  list-style: none;
 }
 
 #form .form_container .bottom form .submit_container a {

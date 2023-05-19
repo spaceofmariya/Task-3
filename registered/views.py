@@ -8,20 +8,31 @@ from registered.models import Form
 
 
 def register(request):
-    form = RegistrationForm(request.POST)
-    if form.is_valid():
-        form.save()
-        response_data = {
-            "status": "success",
-            "title": "Successfully subscribed",
-            "message": "You have successfully subscribed for the Demo."
-        }
+    form = RegistrationForm()
+    context = {
+        "form":form
+    } 
+    return render(request,"web/register.html",context=context)
+
+def submit(request):
+    if request.method == "POST":
+        form = RegistrationForm(request.POST)
+    
+        if form.is_valid():
+            form.save()
+            response_data = {
+                "status": "success",
+                "title": "Successfully registered",
+                "message": "You have successfully registered for the Arts Fest. Click OK to return to the Home page"
+            }
+        else:
+            response_data = {
+                "status": "error",
+                "title": "Already registered",
+                "message": "You have already registered. No multiple registrations allowed."
+            }  
     else:
-        response_data = {
-            "status": "error",
-            "title": "Already subscribed",
-            "message": "You have already subscribed. No need to register again."
-        }    
+        pass 
     return HttpResponse(json.dumps(response_data), content_type="application/javascript")
 
 

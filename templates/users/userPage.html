@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section id="home">
+  {% include 'web/includes/header.html' %}
+  <section class="spotLight">
+    <section class="wrapper logged_in">
+      <section class="spotlight">
+        <h3>List of Registered Students</h3>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><span>Name</span></th>
+                        <!-- <th><span>Date of Birth</span></th> -->
+                        <!-- <th ><span>Gender</span></th> -->
+                        <th><span>Class</span></th>
+                        <!-- <th><span>Email</span></th> -->
+                        <!-- <th><span>Phone Number</span></th> -->
+                        <th><span>Participating Item</span></th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+						<tr>
+							<td>
+                                <a href="#" class="name">{{student.first_name}} {{student.last_name}}</a>
+							</td>
+                            <td>
+								{{student.date_of_birth}}
+							</td>
+                            <td class="gender">
+								<span class="gender">{{student.gender}}</span>
+							</td>
+                            <td>
+								<a href="#">{{student.school_grade}}</a>
+							</td>
+                            <td>
+								<a href="#">{{student.email}}</a>
+							</td>
+                            <td>
+								<span class="number">{{student.contact_number}}</span>
+							</td>
+                            <td>
+								<span class="item">{{student.item}}</span>
+							</td>
+                            <td style="width: 20%;">
+								<a href="{% url 'registered:edit' id=student.id %}" class="table-link reload">
+									<span class="fa-stack">
+										<i class="fa fa-square fa-stack-2x"></i>
+										<i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="{% url 'registered:delete' id=student.id %}" class="table-link danger action-button reload">
+									<span class="fa-stack">
+										<i class="fa fa-square fa-stack-2x"></i>
+										<i class="fa fa-trash-o fa-stack-1x fa-inverse "></i>
+									</span>
+								</a>
+							</td>
+						</tr>
+                        </tr>    
+                    {% endfor %}
+        </div>
+      </section>
+    </section>
+  </section>
+</section>
+{% endblock %}

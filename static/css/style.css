@@ -151,6 +151,10 @@ header a.login,
   align-items: center;
   justify-content: center;
 }
+#home .spotLight section.logged_in {
+  display: block;
+  text-align: center;
+}
 
 #home .spotLight section.spotlight h2 {
   font-size: 60px;
@@ -159,6 +163,10 @@ header a.login,
   /* text-align: center; */
   margin-bottom: 1%;
   display: inline-block;
+}
+#home .spotLight section.spotlight h3 {
+  font-size: 35px;
+  padding: 30px 0;
 }
 #home .spotLight section.spotlight h2 span {
   font-size: 90px;
@@ -185,4 +193,39 @@ header a.login,
 #home .spotLight section.spotlight small {
   display: block;
   margin-top: 10px;
+}
+
+#home .spotLight .logged_in .spotlight {
+  width: 100%;
+}
+
+#home .spotLight .logged_in .spotlight .container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: rgb(249, 245, 249);
+}
+#home .spotLight .logged_in .spotlight .container table {
+  width: 100%;
+}
+#home .spotLight .logged_in .spotlight .container table thead {
+  width: 100%;
+}
+/* #home .spotLight .logged_in .spotlight .container table thead tr {
+  width: 100%;
+} */
+
+table thead tr {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+table thead tr th {
+  /* margin-right: 100px; */
+}
+
+table thead tr th span {
+  font-size: 23px;
+  text-decoration: underline;
 }
