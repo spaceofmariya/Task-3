@@ -16,7 +16,7 @@
                         <!-- <th><span>Email</span></th> -->
                         <!-- <th><span>Phone Number</span></th> -->
                         <th><span>Participating Item</span></th>
-                        <th>&nbsp;</th>
+                        <!-- <th>&nbsp;</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -28,35 +28,22 @@
                             <td>
 								{{student.date_of_birth}}
 							</td>
-                            <td class="gender">
+                            <!-- <td class="gender">
 								<span class="gender">{{student.gender}}</span>
-							</td>
-                            <td>
+							</td> -->
+                            <!-- <td>
 								<a href="#">{{student.school_grade}}</a>
-							</td>
+							</td> -->
                             <td>
 								<a href="#">{{student.email}}</a>
 							</td>
-                            <td>
+                            <!-- <td>
 								<span class="number">{{student.contact_number}}</span>
-							</td>
-                            <td>
+							</td> -->
+                            <!-- <td>
 								<span class="item">{{student.item}}</span>
-							</td>
-                            <td style="width: 20%;">
-								<a href="{% url 'registered:edit' id=student.id %}" class="table-link reload">
-									<span class="fa-stack">
-										<i class="fa fa-square fa-stack-2x"></i>
-										<i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-									</span>
-								</a>
-								<a href="{% url 'registered:delete' id=student.id %}" class="table-link danger action-button reload">
-									<span class="fa-stack">
-										<i class="fa fa-square fa-stack-2x"></i>
-										<i class="fa fa-trash-o fa-stack-1x fa-inverse "></i>
-									</span>
-								</a>
-							</td>
+							</td> -->
+                           
 						</tr>
                         </tr>    
                     {% endfor %}

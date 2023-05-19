@@ -8,8 +8,8 @@ def index(request):
     return render(request,'web/index.html')
 
 def register(request):
-    participants = Form.objects.all()
+    students = Form.objects.all()
     context={
-        "participants": participants
+        "students": students
     } 
     return render(request,'users/userPage.html', context=context)
