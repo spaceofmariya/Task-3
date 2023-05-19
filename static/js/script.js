@@ -1,29 +1,3 @@
-$(document).ready(function () {
-  $("#hamburger-icon").click(function () {
-    $("#hamburger-menu").addClass("active");
-    $("#overlay").addClass("active");
-    $("#close").addClass("active");
-  });
-
-  $("#close").click(function () {
-    $("#hamburger-menu").removeClass("active");
-    $("#overlay").removeClass("active");
-    $("#close").removeClass("active");
-  });
-
-  $("#overlay").click(function () {
-    $("#hamburger-menu").removeClass("active");
-    $("#overlay").removeClass("active");
-    $("#close").removeClass("active");
-  });
-
-  $("a.copy-link").click(function (e) {
-    e.preventDefault();
-    console.log(window.location.href);
-    navigator.clipboard.writeText(window.location.href);
-  });
-});
-
 $(document).on("click", ".action-button", function (e) {
   e.preventDefault();
   $this = $(this);
@@ -34,7 +8,7 @@ $(document).on("click", ".action-button", function (e) {
   var url = $this.attr("href");
   var title = $this.attr("data-title");
   if (!title) {
-    title = "Are you sure?";
+    title = "Delete this item?";
   }
   var isReload = $this.hasClass("reload");
   var isRedirect = $this.hasClass("redirect");
@@ -120,9 +94,9 @@ $(document).on("submit", "form.ajax", function (e) {
   e.preventDefault();
   var $this = $(this);
 
-document.onkeydown = function (evt) {
-  return false;
-};
+  document.onkeydown = function (evt) {
+    return false;
+  };
 
   var url = $this.attr("action");
   var method = $this.attr("method");

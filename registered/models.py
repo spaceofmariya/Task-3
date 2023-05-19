@@ -62,7 +62,7 @@ class Form(models.Model):
     date_of_birth = models.DateField(default=datetime.date.today())
     gender = models.CharField(max_length=120,choices=GENDER)
     school_grade = models.CharField(max_length=120,choices=CLASS)
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     contact_number = models.CharField(max_length=10)
     item = models.CharField(max_length=120,choices=ITEMS)
     

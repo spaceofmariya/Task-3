@@ -24,30 +24,30 @@ def submit(request):
     school_grade = request.POST.get("school_grade")
     item = request.POST.get("item")
     
-    if not Form.objects.filter(email=email).exists():
-        Form.objects.create(
-            first_name = first_name,
-            last_name = last_name,
-            date_of_birth = date_of_birth,
-            gender = gender,
-            email = email,
-            contact_number = contact_number,
-            school_grade = school_grade,
-            item = item
-        )
-        response_data = {
-            "status": "success",
-            "title": "Successfully registered",
-            "message": "You have successfully registered for the Arts Fest. Click OK to return to the Home page",
-            "redirect": "yes",
-            "redirect_url": "/"
-        }
-    else:
-        response_data = {
-            "status": "error",
-            "title": "Already registered",
-            "message": "You have already registered using the same emailid. No multiple registrations allowed."
-        }
+    # if not Form.objects.filter(email=email).exists():
+    Form.objects.create(
+        first_name = first_name,
+        last_name = last_name,
+        date_of_birth = date_of_birth,
+        gender = gender,
+        email = email,
+        contact_number = contact_number,
+        school_grade = school_grade,
+        item = item
+    )
+    response_data = {
+        "status": "success",
+        "title": "Successfully registered",
+        "message": "You have successfully registered for the Arts Fest. Click OK to return to the Home page",
+        "redirect": "yes",
+        "redirect_url": "/"
+    }
+    # else:
+    #     response_data = {
+    #         "status": "error",
+    #         "title": "Already registered",
+    #         "message": "You have already registered using the same emailid. No multiple registrations allowed."
+    #     }
     return HttpResponse(json.dumps(response_data),content_type="application/javascript")
     # if request.method == "POST":
     #     form = RegistrationForm(request.POST)

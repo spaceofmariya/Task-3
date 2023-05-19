@@ -239,6 +239,16 @@ table tbody tr td.edit .img img {
   width: 100%;
   display: block;
 }
+header.details div a {
+  background-color: rgb(112, 178, 222);
+  padding: 13px 30px;
+  font-size: 22px;
+  font-weight: 900;
+  color: rgb(249, 245, 249);
+  text-align: center;
+  border-radius: 8px;
+  display: inline-block;
+}
 #home .details {
   display: flex;
   align-items: center;
@@ -252,4 +262,22 @@ table tbody tr td.edit .img img {
 }
 .detail h3 {
   font-size: 25px;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+.detail h3 span {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.detail ul li {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.detail ul li span {
+}
+.detail ul li h5 {
+  display: inline-block;
+  font-size: 22px;
+  color: rgb(114, 80, 146);
 }

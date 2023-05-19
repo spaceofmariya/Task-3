@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render,reverse
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.http.response import HttpResponseRedirect
 from django.contrib.auth.models import User
@@ -73,10 +73,4 @@ def signup(request):
         }
         return render(request, "users/signup.html", context=context)
     
-def userPage(request):
-    students = Form.objects.all()
-    context={
-        "students": students
-    } 
-    
-    return render(request, "users/userPage.html",context=context)
+

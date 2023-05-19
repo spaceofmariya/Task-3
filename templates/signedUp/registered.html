@@ -1,40 +1,51 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 <section id="home">
-  {% include 'web/includes/header.html' %}
+	<header class="details">
+		<h1>
+			<a href="{% url 'web:index' %}">
+	
+				<h3><b>XYZ School</b></h3>
+	
+			</a>
+		</h1>
+		<div>
+			<a href="{% url 'web:userPage' %}"> Go Back </a>
+		<div>   
+	</header>
   <section class="spotLight details">
     <section class="detail">
-      <h3>Details of {{candidate.first_name}} {{candidate.last_name}}</h3>
+      <h3>Details of <span>{{candidate.first_name}} {{candidate.last_name}}</span></h3>
       <ul>
         <li>
-          <span>First Name</span>
+          <span>First Name : </span>
           <h5>{{candidate.first_name}}</h5>
         </li>
         <li>
-          <span>Last Name</span>
+          <span>Last Name : </span>
           <h5>{{candidate.last_name}}</h5>
         </li>
         <li>
-          <span>Date of Birth</span>
+          <span>Date of Birth : </span>
           <h5>{{candidate.date_of_birth}}</h5>
         </li>
         <li>
-          <span>Gender</span>
+          <span>Gender : </span>
           <h5>{{candidate.gender}}</h5>
         </li>
         <li>
-          <span>Email-id</span>
+          <span>Email-id : </span>
           <h5>{{candidate.email}}</h5>
         </li>
         <li>
-          <span>Mobile Number</span>
+          <span>Mobile Number : </span>
           <h5>{{candidate.contact_number}}</h5>
         </li>
         <li>
-          <span>Class</span>
+          <span>Class : </span>
           <h5>{{candidate.school_grade}}</h5>
         </li>
         <li>
-          <span>Participating Item</span>
+          <span>Participating Item : </span>
           <h5>{{candidate.item}}</h5>
         </li>
       </ul>
