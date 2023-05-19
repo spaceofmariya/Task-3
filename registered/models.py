@@ -6,9 +6,9 @@ from django.db import models
 
 GENDER = (
     ('', 'Select Gender'),
-    ('M', 'Male'),
-    ('F', 'Female'),
-    ('O', 'Other')
+    ('Male', 'Male'),
+    ('Female', 'Female'),
+    ('Other', 'Other')
 )
 
 CLASS = (
@@ -29,31 +29,31 @@ CLASS = (
 
 ITEMS = (
     ('','select 1 item'),
-    ('1','Painting: Crayons'),
-    ('2','Pencil Drawing'),
-    ('3','Painting: Water Colour'),
-    ('4','Cartoon'),
-    ('5','Elocution Malayalam'),
-    ('6','Elocution English'),
-    ('7','Elocution Hindi'),
-    ('8','Recitation Malayalam'),
-    ('9','Recitation English'),
-    ('10','Recitation Hindi'),
-    ('11','Essay Writing English'),
-    ('12','Essay Writing Malayalam'),
-    ('13','Light Music'),
-    ('14','Classical Music'),
-    ('15','Mappilapattu'),
-    ('16','Monoact'),
-    ('17','Mimicry'),
-    ('18','Folk Dance'),
-    ('19','Bharathanatyam'),
-    ('20','Mohiniyattam'),
-    ('21','Guitar'),
-    ('22','Key Board-Western'),
-    ('23','Tabala-Eastern'),
-    ('24','Group Song'),
-    ('25','Group Dance')
+    ('Painting: Crayons','Painting: Crayons'),
+    ('Pencil Drawing','Pencil Drawing'),
+    ('Painting: Water Colour','Painting: Water Colour'),
+    ('Cartoon','Cartoon'),
+    ('Elocution Malayalam','Elocution Malayalam'),
+    ('Elocution English','Elocution English'),
+    ('Elocution Hindi','Elocution Hindi'),
+    ('Recitation Malayalam','Recitation Malayalam'),
+    ('Recitation English','Recitation English'),
+    ('Recitation Hindi','Recitation Hindi'),
+    ('Essay Writing English','Essay Writing English'),
+    ('Essay Writing Malayalam','Essay Writing Malayalam'),
+    ('Light Music','Light Music'),
+    ('Classical Music','Classical Music'),
+    ('Mappilapattu','Mappilapattu'),
+    ('Monoact','Monoact'),
+    ('Mimicry','Mimicry'),
+    ('Folk Dance','Folk Dance'),
+    ('Bharathanatyam','Bharathanatyam'),
+    ('Mohiniyattam','Mohiniyattam'),
+    ('Guitar','Guitar'),
+    ('Key Board-Western','Key Board-Western'),
+    ('Tabala-Eastern','Tabala-Eastern'),
+    ('Group Song','Group Song'),
+    ('Group Dance','Group Dance')
 )
 
 class Form(models.Model):

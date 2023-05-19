@@ -208,24 +208,48 @@ header a.login,
 #home .spotLight .logged_in .spotlight .container table {
   width: 100%;
 }
-#home .spotLight .logged_in .spotlight .container table thead {
+#home .spotLight .logged_in .spotlight .container table {
   width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 25px;
 }
 /* #home .spotLight .logged_in .spotlight .container table thead tr {
   width: 100%;
 } */
 
 table thead tr {
-  margin-bottom: 15px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 20px;
 }
-table thead tr th {
-  /* margin-right: 100px; */
-}
-
 table thead tr th span {
   font-size: 23px;
   text-decoration: underline;
+}
+table tbody tr td a {
+  color: rgb(114, 80, 146);
+}
+
+table tbody tr td.edit {
+  display: flex;
+}
+table tbody tr td.edit .img {
+  width: 25px;
+  margin-right: 40px;
+}
+table tbody tr td.edit .img img {
+  width: 100%;
+  display: block;
+}
+#home .details {
+  display: flex;
+  align-items: center;
+}
+.detail {
+  width: 30%;
+  margin: auto;
+  background-color: rgb(249, 245, 249);
+  border-radius: 30px;
+  padding: 3%;
+}
+.detail h3 {
+  font-size: 25px;
 }
