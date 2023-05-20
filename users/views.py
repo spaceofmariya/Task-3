@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from users.forms import UserForm
 from main.functions import generate_form_errors
 from users.models import User
-from registered.models import Form
+# from registered.models import Form
 
  
 def login(request):
@@ -19,7 +19,7 @@ def login(request):
             if user is not None:
                 auth_login(request,user)
 
-                return HttpResponseRedirect("/logged-in")
+                return HttpResponseRedirect("/logged-in/")
  
         context={
             "error":True,

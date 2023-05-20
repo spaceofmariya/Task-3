@@ -7,6 +7,6 @@ app_name = "web"
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("logged-in", views.register, name="userPage"),
-    path("details/<int:id>", views.details, name="details")
+    path("logged-in/", views.register, name="userPage"),
+    path("participant-details/<int:id>/", views.details, name="details")
 ]

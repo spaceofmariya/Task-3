@@ -184,6 +184,7 @@ $(document).on("submit", "form.ajax", function (e) {
       }
     },
     error: function (data) {
+      console.log(data)
       Swal.hideLoading();
 
       var title = "An error occurred";

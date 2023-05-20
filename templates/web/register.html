@@ -5,12 +5,7 @@
     <h5>Register your Application</h5>
   </div>
   <div class="bottom">
-    <form
-      action="{% url 'registered:submit' %}"
-      class="ajax redirect"
-      method="post"
-      enctype="multipart/form-data"
-    >
+    <form class="ajax redirect" action="" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="input_container">
         <label for="{{form.first_name.id_for_label}}">

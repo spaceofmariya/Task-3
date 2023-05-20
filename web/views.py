@@ -3,7 +3,6 @@ from django.shortcuts import render
 from registered.models import Form
 
 
-
 def index(request):
     return render(request,'web/index.html')
 
