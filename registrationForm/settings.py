@@ -20,8 +20,8 @@ INSTALLED_APPS = [
 
     "registrationForm",
     "web",
+    "users",
     "registered",
-    "users"
 ]
 
 MIDDLEWARE = [

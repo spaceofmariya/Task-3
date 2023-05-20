@@ -16,6 +16,7 @@
 b {
   font-weight: 800;
 }
+
 @font-face {
   font-family: "Pacifico";
   src: url("../fonts/Pacifico-Regular.woff2") format("woff2"),
@@ -76,10 +77,6 @@ header h1 a h3 b {
   font-size: 16px;
 }
 
-#form .form_container .bottom form {
-  /* text-align: center; */
-}
-
 #form .form_container .bottom form .input_container {
   margin-bottom: 20px;
 }
@@ -97,7 +94,6 @@ header h1 a h3 b {
   border-radius: 10px;
   font-size: 17px;
   padding: 0 10px;
-  /* color: rgb(236, 160, 180); */
 }
 
 #form .form_container .bottom form .submit_container {
@@ -156,6 +152,7 @@ header h1 a h3 b {
   flex-direction: column;
   margin-bottom: 40px;
 }
+
 #form .register .bottom form .input_container select {
   height: 40px;
   margin-left: 20px;

@@ -3,16 +3,15 @@ import datetime
 from django.db import models
 
 
-
 GENDER = (
-    ('', 'Select Gender'),
+    ('', 'select gender'),
     ('Male', 'Male'),
     ('Female', 'Female'),
     ('Other', 'Other')
 )
 
 CLASS = (
-    ('','select'),
+    ('','select class'),
     ('1','1'),
     ('2', '2'),
     ('3','3'),

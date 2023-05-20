@@ -7,6 +7,6 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ["first_name", "last_name", "email", "username", "password"]
         widgets = {
-            "password" :  forms.widgets.PasswordInput(attrs={"class":"hello","placeholder":"Enter strong password"})
+            "password" :  forms.widgets.PasswordInput(attrs={"placeholder":"Enter strong password"})
         }
     

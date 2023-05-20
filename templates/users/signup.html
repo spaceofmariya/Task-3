@@ -5,12 +5,15 @@
   </div>
   <div class="bottom">
     <form action="" method="post">
-      {% csrf_token %} {% for field in form %}
-      <div class="input_container signup">
-        <label for="{{field.id_for_label}}"> {{field.label}} </label>
-        {{field}}
+      {% csrf_token %}
+      <div class="signup">
+        {% for field in form %}
+        <div class="input_container signup">
+          <label for="{{field.id_for_label}}"> {{field.label}} </label>
+          {{field}}
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
       <div class="submit_container">
         {% if error %}
         <p class="error-message">{{message}}</p>

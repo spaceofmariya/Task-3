@@ -8,8 +8,7 @@ from registered.models import Form
 
 
 #Participant Registration Function
-def register(request):
-    
+def register(request):   
     if request.method == "POST":
         first_name = request.POST.get("first_name")
         last_name = request.POST.get("last_name")

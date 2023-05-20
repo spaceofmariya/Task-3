@@ -3,12 +3,12 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 from django.http.response import HttpResponseRedirect
 from django.contrib.auth.models import User
 
-from users.forms import UserForm
 from main.functions import generate_form_errors
-from users.models import User
-# from registered.models import Form
+from users.forms import UserForm
+from users.models import SignedupUser
 
- 
+
+#School official's LOGIN function 
 def login(request):
     if request.method == "POST":
         username = request.POST.get("username")
@@ -31,11 +31,13 @@ def login(request):
         return render(request, "users/login.html", context=context)
  
 
+#School official's LOGOUT function
 def logout(request):
     auth_logout(request)
     return HttpResponseRedirect(reverse("web:index"))
 
 
+#School official's SIGNUP function
 def signup(request):
     if request.method == "POST":
         form = UserForm(request.POST)
@@ -49,8 +51,9 @@ def signup(request):
                 first_name=instance.first_name,
                 last_name=instance.last_name
             )
+            user.save()
 
-            User.objects.create(name=instance.first_name, user=user)
+            SignedupUser.objects.create(name=instance.first_name, user=user)
 
             user = authenticate(request,username=instance.username, password=instance.password)
             auth_login(request,user)

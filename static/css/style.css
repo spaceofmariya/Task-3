@@ -118,6 +118,7 @@ header {
 header h1 a {
   display: block;
 }
+
 header h1 a h3 b {
   color: rgb(20, 120, 186);
   font-size: 40px;
@@ -125,7 +126,6 @@ header h1 a h3 b {
 
 header a.login,
 .logout {
-  /* background-color: rgb(20, 120, 186); */
   background-color: rgb(112, 178, 222);
   padding: 13px 30px;
   font-size: 22px;
@@ -151,6 +151,7 @@ header a.login,
   align-items: center;
   justify-content: center;
 }
+
 #home .spotLight section.logged_in {
   display: block;
   text-align: center;
@@ -160,14 +161,15 @@ header a.login,
   font-size: 60px;
   text-transform: uppercase;
   font-weight: 800;
-  /* text-align: center; */
   margin-bottom: 1%;
   display: inline-block;
 }
+
 #home .spotLight section.spotlight h3 {
   font-size: 35px;
   padding: 30px 0;
 }
+
 #home .spotLight section.spotlight h2 span {
   font-size: 90px;
   font-weight: 800;
@@ -182,14 +184,12 @@ header a.login,
 #home .spotLight section.spotlight a.register {
   font-size: 23px;
   padding: 17px;
-  /* background-color: rgb(249, 245, 249); */
   background-color: rgb(112, 178, 222);
-  /* color: rgb(20, 120, 186); */
   color: rgb(249, 245, 249);
   font-weight: 800;
   border-radius: 10px;
-  /* border: 1px solid rgb(20, 120, 186); */
 }
+
 #home .spotLight section.spotlight small {
   display: block;
   margin-top: 10px;
@@ -206,25 +206,26 @@ header a.login,
   background-color: rgb(249, 245, 249);
   border-radius: 30px;
 }
+
 #home .spotLight .logged_in .spotlight .container table {
   width: 100%;
 }
+
 #home .spotLight .logged_in .spotlight .container table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 25px;
 }
-/* #home .spotLight .logged_in .spotlight .container table thead tr {
-  width: 100%;
-} */
 
 table thead tr {
   margin-bottom: 20px;
 }
+
 table thead tr th span {
   font-size: 23px;
   text-decoration: underline;
 }
+
 table tbody tr td a {
   color: rgb(114, 80, 146);
 }
@@ -232,14 +233,17 @@ table tbody tr td a {
 table tbody tr td.edit {
   display: flex;
 }
+
 table tbody tr td.edit .img {
   width: 25px;
   margin-right: 40px;
 }
+
 table tbody tr td.edit .img img {
   width: 100%;
   display: block;
 }
+
 header.details div a {
   background-color: rgb(112, 178, 222);
   padding: 13px 30px;
@@ -250,10 +254,12 @@ header.details div a {
   border-radius: 8px;
   display: inline-block;
 }
+
 #home .details {
   display: flex;
   align-items: center;
 }
+
 .detail {
   width: 30%;
   margin: auto;
@@ -261,11 +267,13 @@ header.details div a {
   border-radius: 30px;
   padding: 3%;
 }
+
 .detail h3 {
   font-size: 25px;
   margin-bottom: 30px;
   text-decoration: underline;
 }
+
 .detail h3 span {
   text-transform: uppercase;
   font-size: 30px;
@@ -275,8 +283,7 @@ header.details div a {
   width: 100%;
   margin-bottom: 20px;
 }
-.detail ul li span {
-}
+
 .detail ul li h5 {
   display: inline-block;
   font-size: 22px;
