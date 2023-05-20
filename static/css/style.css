@@ -137,12 +137,17 @@ header a.login,
 }
 
 #home .spotLight {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   color: rgb(20, 120, 186);
   text-align: center;
   background-image: url(../images/art2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#home .center {
+  display: flex;
+  align-items: center;
 }
 
 #home .spotLight section.wrapper {

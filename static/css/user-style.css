@@ -54,7 +54,7 @@ header h1 a h3 b {
 }
 
 #form {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   background-image: url(../images/art2.jpg);
   background-repeat: no-repeat;
   background-size: cover;

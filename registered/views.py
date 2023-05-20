@@ -95,7 +95,7 @@ def delete(request,id):
     student.delete()
     response_data = {
         "title": "Successfully Deleted",
-        "message": "Application Successfully Deleted",
+        "message": "Participant deleted successfully ",
         "status": "success",
         "redirect": "yes",
     }
